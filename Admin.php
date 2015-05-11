@@ -2,6 +2,7 @@
 /*	admin extends user
 *	admin has additional methods to editUser	
 */
+require('User.php');
 
 class Admin extends User {
 	function __construct($username= " ", $userId= " ", $email = " ", $password= " ", $accessLevel= " ") {

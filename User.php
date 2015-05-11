@@ -10,6 +10,7 @@ class User {
 	private $userId = " ";
 	private $email = " ";
 	private $loggedIn = false;
+	private $loggedOut = true;
 
 	//define a class constructor to accept username, userId, email, and password as parameters
 	function __construct($username="Admin", $password="blah", $userId="", $email="" ) {
@@ -21,9 +22,11 @@ class User {
 		
 	}
 	//method to determine if user credentials match correctly then is logged in
-	function isLoggedIn($username, $password){
-			return ($this->username = "Admin") && ($this->password = "blah");
-		
+	function isLoggedIn($username="Admin", $password="blah"){
+			$this->username=$username;
+			$this->password=$password;
+			
+
 		}
 		//return ($this->username == $username && $this->password == $password);
 		
@@ -34,7 +37,7 @@ class User {
 
 	function getUserId() {
 		return $this->userId;
-	}
+	}    
 
 	function getEmail() {
 		return $this->email;
