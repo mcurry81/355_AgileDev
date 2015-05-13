@@ -5,15 +5,15 @@
 
 class User {
 	//declare private variables
-	private $username = "Admin";
-	private $password = "blah";
-	private $userId = " ";
-	private $email = " ";
+	private $username;
+	private $password;
+	private $userId;
+	private $email;
 	private $loggedIn = false;
-	private $loggedOut = true;
+	
 
 	//define a class constructor to accept username, userId, email, and password as parameters
-	function __construct($username="Admin", $password="blah", $userId="", $email="" ) {
+	function __construct($username = '',$password = '',$usesrId = '',$email = '') {
 		//initialize our variables
 		$this->username=$username;
 		$this->userId=$userId;
@@ -22,13 +22,19 @@ class User {
 		
 	}
 	//method to determine if user credentials match correctly then is logged in
-	function isLoggedIn($username="Admin", $password="blah"){
-			$this->username=$username;
-			$this->password=$password;
-			
+	function isLoggedIn($username, $password) {
+			$this->username="Admin";
+			$this->password="blah";
+
 
 		}
 		//return ($this->username == $username && $this->password == $password);
+		//method to log user out and reset all variables
+	function isLoggedOut($username,$password,$userId,$email) {
+		unset($username);
+		$loggedIn = false;
+
+	}
 		
 
 	function getUsername() {

@@ -2,10 +2,10 @@
 /*	admin extends user
 *	admin has additional methods to editUser	
 */
-require('User.php');
+
 
 class Admin extends User {
-	function __construct($username= " ", $userId= " ", $email = " ", $password= " ", $accessLevel= " ") {
+	function __construct($username = '', $userId = '', $email = '' $password = '', $accessLevel ='') {
 	$this->username=$username;
 	$this->userId=$userId;
 	$this->email=$email;
