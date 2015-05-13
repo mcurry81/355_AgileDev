@@ -1,13 +1,14 @@
 <?php
 
-require ('Admin.php');
-require ('User.php');
+require 'Admin.php';
+//require 'User.php';
 
 //Create user
-$username = new User($username='Melissa');
+$user1 = new User("Melissa", "something", 2345, "melissa@mail.com");
 
 //Create Admin
-$Admin = new Admin ($username='Shristhy');
+$Admin1 = new Admin ("Shristhy", "supersecret", 9999, "shristhy@mail.com", "admin");
+
 
 //invoke Admin
 $Admin->editUser();

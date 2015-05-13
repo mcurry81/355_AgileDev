@@ -1,11 +1,13 @@
 <?php
 /*	admin extends user
-*	admin has additional methods to editUser	
+*	admin has additional methods: editUser().
 */
 
-
 class Admin extends User {
-	function __construct($username = '', $userId = '', $email = '' $password = '', $accessLevel ='') {
+
+	protected $accessLevel;
+
+	function __construct($username, $password, $userID, $email, $accessLevel) {
 	$this->username=$username;
 	$this->userId=$userId;
 	$this->email=$email;
@@ -22,7 +24,7 @@ class Admin extends User {
 	}
 
 	function editUser($username)  {
-		return $this->username;
+		//return $this->username;
 		echo "<p>Editing $this->username</p>";
 		
 	}
